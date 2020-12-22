@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-        
+
         <div class="logo">
             <img src="{{ asset('img/marchio-sito-test.png') }}" alt="logo">
         </div>

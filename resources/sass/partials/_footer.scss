@@ -1,3 +1,35 @@
 footer{
-    background-color: lightgreen;
+
+    .footer-cont{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px;
+
+        .footer-logo{
+            width: 35%;
+        }
+        .footer-items{
+            width: 65%;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            .footer-item{
+                width: 200px;
+                p{
+                    font-weight: bold;
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    color: $primary-color;
+                }
+                a{
+                    text-decoration: none;
+                    display: block;
+                    color: $secondary-color;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }

@@ -11,8 +11,11 @@
 }
 
 header {
-  background-color: lightgreen;
   text-align: center;
+}
+
+header img {
+  cursor: pointer;
 }
 
 header ul li {
@@ -32,8 +35,41 @@ header ul li a:hover {
   background-color: #b3e5fc;
 }
 
-footer {
-  background-color: lightgreen;
+footer .footer-cont {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+footer .footer-cont .footer-logo {
+  width: 35%;
+}
+
+footer .footer-cont .footer-items {
+  width: 65%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+footer .footer-cont .footer-items .footer-item {
+  width: 200px;
+}
+
+footer .footer-cont .footer-items .footer-item p {
+  font-weight: bold;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #002d75;
+}
+
+footer .footer-cont .footer-items .footer-item a {
+  text-decoration: none;
+  display: block;
+  color: #808080;
+  font-size: 18px;
 }
 
 main {

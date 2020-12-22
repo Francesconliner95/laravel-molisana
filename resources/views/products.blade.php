@@ -1,22 +1,87 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Prodotti</h1>
+<div class="container">
 
-<div class="container-pasta">
+    <div class="container-pasta">
 
-    @for ($i=0; $i < count($pasta); $i++)
+        <h2>Le Lunghe</h2>
+        <div class="container-tipo-pasta">
+            @for ($i=0; $i < count($pasta); $i++)
 
-        <div class="pasta">
-            <p>{{$pasta[$i]['titolo']}}</p>
+               @if ($pasta[$i]['tipo']=='lunga')
+
+                   <div class="pasta">
+                       <img src="{{$pasta[$i]['src']}}" alt="sfondo">
+                       <span>{{$pasta[$i]['titolo']}}</span>
+                   </div>
+
+               @endif
+
+           @endfor
+
         </div>
-        
-    @endfor
+
+        <h2>Le Corte</h2>
+        <div class="container-tipo-pasta">
+            @for ($i=0; $i < count($pasta); $i++)
+
+               @if ($pasta[$i]['tipo']=='corta')
+
+                   <div class="pasta">
+                       <img src="{{$pasta[$i]['src']}}" alt="sfondo">
+                       <span>{{$pasta[$i]['titolo']}}</span>
+                   </div>
+
+               @endif
+
+           @endfor
+
+        </div>
+
+        <h2>Le Cortissime</h2>
+        <div class="container-tipo-pasta">
+            @for ($i=0; $i < count($pasta); $i++)
+
+               @if ($pasta[$i]['tipo']=='cortissima')
+
+                   <div class="pasta">
+                       <img src="{{$pasta[$i]['src']}}" alt="sfondo">
+                       <span>{{$pasta[$i]['titolo']}}</span>
+                   </div>
+
+               @endif
+
+           @endfor
+        </div>
+
+        {{-- @for ($i=0; $i < count($pasta); $i++)
+
+            @if ($pasta[$i]['tipo']=='lunga')
+
+                <div class="pasta">
+                    <img src="{{$pasta[$i]['src']}}" alt="sfondo">
+                    <span>{{$pasta[$i]['titolo']}}</span>
+                </div>
+
+            @elseif($pasta[$i]['tipo']=='corta')
+
+                <div class="pasta">
+                    <img src="{{$pasta[$i]['src']}}" alt="sfondo">
+                    <span>{{$pasta[$i]['titolo']}}</span>
+                </div>
+
+            @else
+
+                <div class="pasta">
+                    <img src="{{$pasta[$i]['src']}}" alt="sfondo">
+                    <span>{{$pasta[$i]['titolo']}}</span>
+                </div>
+
+            @endif
+
+        @endfor --}}
+    </div>
 
 </div>
-
-
-
-
-
 @endsection

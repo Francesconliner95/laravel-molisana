@@ -5,6 +5,11 @@
   font-family: "Teko", sans-serif;
 }
 
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
 header {
   background-color: lightgreen;
   text-align: center;
@@ -16,7 +21,6 @@ header ul li {
 
 header ul li a {
   width: 100%;
-  height: 100%;
   display: inline-block;
   text-decoration: none;
   padding: 10px;
@@ -32,18 +36,47 @@ footer {
   background-color: lightgreen;
 }
 
-main .container-pasta {
+main {
+  background: url(/images/fondo-pag-speciali.jpg?2f95c43d2f5c6ce37bf1838709b316a3);
+}
+
+main .container-pasta h2 {
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #002d75;
+}
+
+main .container-pasta .container-tipo-pasta {
+  padding: 20px;
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-main .container-pasta div.pasta {
+main .container-pasta .container-tipo-pasta div.pasta {
   background-color: red;
-  width: 300px;
+  width: 350px;
   height: 300px;
-  border: solid 2px black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  margin: 5px;
+}
+
+main .container-pasta .container-tipo-pasta div.pasta:hover {
+  cursor: pointer;
+}
+
+main .container-pasta .container-tipo-pasta div.pasta img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .container-pasta .container-tipo-pasta div.pasta span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 

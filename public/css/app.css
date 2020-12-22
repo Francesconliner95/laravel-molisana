@@ -1,0 +1,49 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Teko", sans-serif;
+}
+
+header {
+  background-color: lightgreen;
+  text-align: center;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  font-size: 24px;
+}
+
+header ul li a:hover {
+  background-color: #b3e5fc;
+}
+
+footer {
+  background-color: lightgreen;
+}
+
+main .container-pasta {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .container-pasta div.pasta {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

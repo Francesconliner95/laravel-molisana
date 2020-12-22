@@ -1,0 +1,21 @@
+header{
+    background-color: lightgreen;
+    text-align: center;
+    ul{
+        li{
+            display: inline-block;        
+            a{
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                text-decoration: none;
+                padding: 10px;
+                color: black;
+                font-size: 24px;
+                &:hover{
+                    background-color: #b3e5fc;
+                }
+            }
+        }
+    }
+}

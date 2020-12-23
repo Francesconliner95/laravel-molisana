@@ -5,11 +5,21 @@
 
     <div class="container-pasta">
 
-        <h2>Le Lunghe</h2>
+        @php
+            $tipo = [
+                    'lunga'=>'Le Lunghe',
+                    'corta'=>'Le Corte',
+                    'cortissima'=>'Le Cortissime'
+                    ]
+        @endphp
+
+        @foreach ($tipo as $key => $t)
+
+        <h2>{{$t}}</h2>
         <div class="container-tipo-pasta">
             @for ($i=0; $i < count($pasta); $i++)
 
-               @if ($pasta[$i]['tipo']=='lunga')
+               @if ($pasta[$i]['tipo']==$key)
 
                    <div class="pasta">
                        <img src="{{$pasta[$i]['src']}}" alt="sfondo">
@@ -21,8 +31,9 @@
            @endfor
 
         </div>
+        @endforeach
 
-        <h2>Le Corte</h2>
+        {{-- <h2>Le Corte</h2>
         <div class="container-tipo-pasta">
             @for ($i=0; $i < count($pasta); $i++)
 
@@ -53,7 +64,7 @@
                @endif
 
            @endfor
-        </div>
+        </div> --}}
 
         {{-- @for ($i=0; $i < count($pasta); $i++)
 

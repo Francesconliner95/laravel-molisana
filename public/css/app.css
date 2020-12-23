@@ -35,6 +35,10 @@ header ul li a:hover {
   background-color: #b3e5fc;
 }
 
+.active {
+  background-color: #b3e5fc;
+}
+
 footer .footer-cont {
   display: flex;
   justify-content: space-between;

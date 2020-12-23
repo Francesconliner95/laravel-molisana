@@ -8,16 +8,23 @@
         <nav>
             <ul>
                 <li>
-                    <a href="{{ url('/') }}">Home</a>
+                    <a
+                    calss="{{ Request::route()->getName() == 'homepage' ? 'active' : ''}}"
+                     href="{{ url('/') }}">Home</a>
+
                 </li>
                 <li>
-                    <a href="{{ url('/products') }}">Prodotti</a>
+                    <a
+                    calss="{{ Request::route()->getName() == 'products' ? 'active' : ''}}"
+                    href="{{ url('/products') }}">Prodotti</a>
                 </li>
                 <li>
-                    <a href="{{ url('/news') }}">News</a>
+                    <a
+                    calss="{{ Request::route()->getName() == 'news' ? 'active' : ''}}"
+                    href="{{ url('/news') }}">News</a>
                 </li>
             </ul>
         </nav>
-
+        {{ Request::route()->getName()}}
     </div>
 </header>
